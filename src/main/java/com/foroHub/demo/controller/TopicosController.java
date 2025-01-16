@@ -7,6 +7,7 @@ import com.foroHub.demo.domain.topico.DatosRegistroTopico;
 import com.foroHub.demo.domain.topico.DatosRespuestaTopico;
 import com.foroHub.demo.domain.topico.Topico;
 import com.foroHub.demo.domain.topico.TopicoRepository;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,6 +29,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/topicos")
+@SecurityRequirement(name = "bearer-key")
 public class TopicosController {
 
     @Autowired

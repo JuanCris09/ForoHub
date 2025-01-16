@@ -2,6 +2,7 @@ package com.foroHub.demo.controller;
 
 import com.foroHub.demo.domain.usuario.DatosAutenticacionUsuario;
 import com.foroHub.demo.domain.usuario.Usuario;
+import com.foroHub.demo.infra.security.DatosJWTToken;
 import com.foroHub.demo.infra.security.TokenService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,6 @@ public class AutenticacionController {
                 , datosAutenticacionUsuario.contrasena());
         var usuarioAutenticado = authenticationManager.authenticate(authToken);
         var JWTtoken = tokenService.generarToken((Usuario) usuarioAutenticado.getPrincipal());
-        return ResponseEntity.ok(JWTtoken);
+        return ResponseEntity.ok(new DatosJWTToken(JWTtoken));
     }
 }
