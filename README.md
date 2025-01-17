@@ -91,8 +91,6 @@ functions such as classes, DTO, repository, and controller. It is worth noting t
 this was a significant challenge for me, and the topic of Security was my biggest
 hurdle, but it was accomplished.
 
-- API:  [gutendex](https://gutendex.com/)
-
 ## Author
 
 - Website - [Juan Pablo Cristancho](https://my-portafolio-mygi-dvu8swsn6-juan-cris-projects.vercel.app)
